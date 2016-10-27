@@ -1,0 +1,41 @@
+#pic{
+    max-width:600px;
+    width:600px;
+
+}
+#pic img{
+    max-width:600px;
+    width:600px;
+}
+#pic ul{
+    padding:0;
+    position:absolute;
+    top:80px;
+    left:580px;
+
+}
+#pic li{
+    list-style: none;
+    width:20px;
+    height:20px;
+    background-color:#000;
+    margin:5px;
+}
+#pic p{
+    display: inline-block;
+    border:1px solid #000;
+    background-color: #9acfea;
+    padding:1% 8%;
+    position: absolute;
+    top:340px;
+    left:140px;
+}
+#pic span{
+    display: inline-block;
+    border:1px solid #000;
+    position: absolute;
+    top:8px;
+    left:270px;
+    background-color: #9acfea;
+    font-size:28px;
+}

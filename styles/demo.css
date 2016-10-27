@@ -1,0 +1,33 @@
+img{
+    max-width:300px;
+    width:300px;
+}
+#prev{
+    position: absolute;
+    top:120px;
+    font-size:30px;
+    color:#000;
+    font-weight:bold;
+    text-decoration: none;
+}
+#next{
+    position: absolute;
+    left:324px;
+    top:120px;
+    font-size:30px;
+    color:#000;
+    font-weight:bold;
+    text-decoration: none;
+}
+a:hover{
+    color: #333333;
+    text-decoration: none;
+}
+p{
+    color: #000000;
+    padding-left:100px;
+}
+span{
+    display:block;
+    padding-left:140px;
+}

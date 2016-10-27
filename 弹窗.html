@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            height:2000px;
+        }
+        button{
+            margin-top:400px;
+            color:red;
+        }
+        #box{
+            width: 300px;
+            height:300px;
+            background-color: #8c8c8c;
+            display: none;
+            position: absolute;
+        }
+
+    </style>
+    <script>
+
+        window.onload = function(){
+
+            var oBtn = document.getElementById('btn');
+            var oBox = document.getElementById('box');
+            var oClose = document.getElementById('close');
+
+            oBtn.onclick = function(){
+                var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+                var scrollLeft = document.documentElement.scrollLeft || document.body.scrollLeft;
+
+                oBox.style.display = 'block';
+                oBox.style.top = (document.documentElement.clientHeight-oBox.offsetHeight) / 2 + scrollTop + 'px';
+                oBox.style.left = (document.documentElement.clientWidth-oBox.offsetWidth) / 2 + scrollLeft + 'px';
+
+            };
+
+            oClose.onclick = function(){
+              oBox.style.display = 'none';
+            }
+        }
+
+    </script>
+</head>
+<body>
+<button id="btn">
+    菜单
+</button>
+<div id="box">
+    <span id="close">X</span>
+</div>
+</body>
+</html>

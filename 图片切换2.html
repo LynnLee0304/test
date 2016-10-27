@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        img{
+            width:800px;
+            height:600px;
+        }
+        ul{
+            margin-left: 230px;
+        }
+        ul li{
+            float: left;
+            margin-left: 50px;
+        }
+        .active{
+            color:red;
+        }
+    </style>
+</head>
+
+<body>
+<img id="img" src="images/1.jpg" />
+<span id="prev"><</span>
+<span id="next">></span>
+<ul id="list">
+</ul>
+<script>
+    window.onload = function(){
+        var oImg = document.getElementById('img');
+        var oPrev = document.getElementById('prev');
+        var oNext = document.getElementById('next');
+        var oUl = document.getElementById('list');
+        var aLi = oUl.getElementsByTagName('li');
+
+        var arrUrl = ['images/1.jpg','images/2.jpg','images/3.jpg','images/4.jpg'];
+        var num = 0;
+        for(var i=0;i<arrUrl.length;i++){
+            oUl.innerHTML += '<li></li>'
+        }
+
+
+        //loading......
+        oImg.src = arrUrl[num];
+        aLi[num].className = 'active';
+
+        oNext.onclick = function(){
+            num++;
+            num%=arrUrl.length;
+            oImg.src = arrUrl[num];
+            aLi[num].className = 'active';
+            aLi[num-1].className = '';
+
+        };
+        oPrev.onclick = function(){
+            num--;
+            num%=arrUrl.length;
+            oImg.src = arrUrl[num];
+            aLi[num].className = 'active';
+            aLi[num+1].className = '';
+
+        }
+
+
+
+
+
+
+    }
+
+</script>
+
+</body>
+</html>
